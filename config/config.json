@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "sahbana",
+    "password": "anagram",
+    "database": "anagrambasic",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "sahbana",
+    "password": "anagram",
+    "database": "anagrambasic",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "sahbana",
+    "password": "anagram",
+    "database": "anagrambasic",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
