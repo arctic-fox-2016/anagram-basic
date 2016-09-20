@@ -14,7 +14,7 @@ util.anagrams = function(source, callback){
       result.push(content[i])
   }
 
-
+ 
   callback(source, result);
 }
 
