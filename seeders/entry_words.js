@@ -1,0 +1,41 @@
+'use strict';
+var Promise = require('bluebird')
+var fs = require('fs')
+
+module.exports = {
+  up: function (queryInterface, Sequelize) {
+    /*
+      Add altering commands here.
+      Return a promise to correctly handle asynchronicity.
+
+      Example:
+      return queryInterface.bulkInsert('Person', [{
+        name: 'John Doe',
+        csisBetaMember: false
+      }], {});
+    */
+    var wordsArray = fs.readFileSync('db/fixtures/words').toString().split('\n')
+    var words = []
+
+    for (var i=0; i < wordsArray.length; i++){
+      if (wordsArray[i].trim != "") {
+         words.push({kata: wordsArray[i].trim(), createdAt: new Date(), updatedAt: new Date()})
+      }
+    }
+    return Promise.try(function() {
+        return queryInterface.bulkInsert({tableName: 'words'}, words, {})
+    }).then( function() {
+        console.log('Seed berhasil! :D');
+    })
+  },
+
+  down: function (queryInterface, Sequelize) {
+    /*
+      Add reverting commands here.
+      Return a promise to correctly handle asynchronicity.
+
+      Example:
+      return queryInterface.bulkDelete('Person', null, {});
+    */
+  }
+};
