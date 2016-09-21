@@ -9,10 +9,10 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/:word', function(req, res, next) {
-  var word = req.params.word;
-  helper.anagrams(word, function(source, data){
-    res.render('index', { title: 'Anagrams', word: source, anagrams: data });
-  });
+  //var word = req.params.word;
+  // helper.anagrams(word, function(source, data){
+  //   res.render('index', { title: 'Anagrams', word: source, anagrams: data });
+  // });
 });
 
 module.exports = router;
