@@ -1,0 +1,23 @@
+ {
+  "development": {
+    "username": "ivan",
+    "password": "1234",
+    "database": "anagram_dev",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "ivan",
+    "password": "1234",
+    "database": "anagram_dev",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "ivan",
+    "password": "1234",
+    "database": "anagram_dev",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
