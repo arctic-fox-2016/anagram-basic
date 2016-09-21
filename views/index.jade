@@ -2,6 +2,9 @@ extends layout
 
 block content
   h1= title
+  form(action="/" method="get")
+    input(name="word")
+    input(type="submit" value="Check Anagram")
   p anagram dari kata #{word} adalah :
   if word
     ul
